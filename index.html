@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maria Clara - Portfólio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Maria Clara - Portfólio</title>
 </head>
 <body>
-  <div class="profile-container">
-    <div class="profile-image">
-      <img src="https://i.imgur.com/AK60E56.jpg" alt="Imagem de perfil de Maria Clara">
-    </div>
-    <h1>Maria Clara</h1>
-    <div class="links-container">
-      <a href="https://br.linkedin.com/in/maria-clara-s-bezerra1103" target="_blank" class="button">LinkedIn</a>
-      <a href="https://github.com/4rchivemoon" target="_blank" class="button">GitHub</a>
-      <a href="https://gitlab.com/seu-usuario" target="_blank" class="button">GitLab</a>
-      <a href="mailto:m.clarasb@hotmail.com" class="button">Contato</a>
-    </div>
-  </div>
 
-  <div class="portfolio-container">
-    <div class="portfolio">
-      <div class="portfolio_hover"></div>
-      <h1 class="title">CSS3</h1>
-      <a href="#" class="link" title="Saiba mais">Códigos CSS</a>
-      <img src="uploads/css.jpg" alt="CSS3">
-    </div>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <i class="fa-regular fa-user"></i> <!-- Alterado para um ícone de perfil -->
+            </div><!--logo-->
 
-    <div class="portfolio">
-      <div class="portfolio_hover"></div>
-      <h1 class="title">jQuery</h1>
-      <a href="#" class="link" title="Saiba mais">Efeitos com jQuery</a>
-      <img src="uploads/jquery.jpg" alt="jQuery">
-    </div>
+            <div class="cabeçalho-link">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Trabalho</a></li>
+                <button onclick="window.location.href='mailto:m.clarasb@hotmail.com'">Meu Contato</button>
+            </div><!--cabeçalho-link-->
+        </header>
 
-    <div class="portfolio">
-      <div class="portfolio_hover"></div>
-      <h1 class="title">HTML5</h1>
-      <a href="#" class="link" title="Saiba mais">Códigos HTML</a>
-      <img src="uploads/html.jpg" alt="HTML5">
-    </div>
-  </div>
+        <div class="container-text">
+            <div class="text">
+                <h3>Olá, Pessoal</h3>
+                <h1>Eu sou <span>Maria Clara</span></h1>
+                <p>Pesquisadora em Astrofísica e Astronomia</p>
+                <div class="redes-social">
+                    <a href="https://br.linkedin.com/in/maria-clara-s-bezerra1103" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/4rchivemoon" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://gitlab.com/seu-usuario" target="_blank"><i class="fa-brands fa-gitlab"></i></a>
+                    <a href="mailto:m.clarasb@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div><!--redes-social-->
+                <button class="btn" onclick="window.location.href='#about'">Sobre Mim</button>
+            </div><!--text-->
+        </div><!--container-text-->
+    </div><!--background-->
 
-  <footer>
-    <p>&copy; 2024 Maria Clara da S Bezerra. Todos os direitos reservados.</p>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script> <!-- Corrigido para o arquivo de script -->
+    
 </body>
 </html>
-
-    
