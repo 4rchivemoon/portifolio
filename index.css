@@ -45,11 +45,13 @@ header {
 }
 
 .logo img.profile-icon {
-    width: 75px; /* Tamanho da imagem ajustado */
-    height: 75px; /* Tamanho da imagem ajustado */
-    border-radius: 100%; /* Torna a imagem redonda */
-    border: 2px solid #2ecc71; /* Cor da borda */
-    object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorção */
+    width: 75px; 
+    height: 75px; 
+    border-radius: 100%;
+    border: 2px solid #000000;; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto;
 }
 
 .container-text {
