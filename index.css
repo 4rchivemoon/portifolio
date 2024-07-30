@@ -41,7 +41,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000; /* Assegura que o botão fique sobre outros elementos */
+    z-index: 5000; /* Assegura que o botão fique sobre outros elementos */
 }
 
 .theme-toggle button {
