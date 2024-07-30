@@ -45,8 +45,8 @@ header {
 }
 
 .logo img.profile-icon {
-    width: 150px; /* Tamanho da imagem ajustado */
-    height: 150px; /* Tamanho da imagem ajustado */
+    width: 100px; /* Tamanho da imagem ajustado */
+    height: 100px; /* Tamanho da imagem ajustado */
     border-radius: 50%; /* Torna a imagem redonda */
     border: 2px solid #2ecc71; /* Cor da borda */
     object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorção */
