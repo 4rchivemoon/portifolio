@@ -13,22 +13,22 @@
     <div class="background">
         <header>
             <div class="logo">
-                <i class="fa-regular fa-user"></i> <!-- Alterado para um ícone de perfil -->
+                <i class="fa-regular fa-user"></i> <!-- Ícone de perfil -->
             </div><!--logo-->
 
             <div class="cabeçalho-link">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Trabalho</a></li>
-                <button onclick="window.location.href='mailto:m.clarasb@hotmail.com'">Meu Contato</button>
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Trabalho</a>
+                <button onclick="window.location.href='mailto:m.clarasb@hotmail.com'">Contato</button>
             </div><!--cabeçalho-link-->
         </header>
 
         <div class="container-text">
             <div class="text">
                 <h3>Olá, Pessoal</h3>
-                <h1>Eu sou <span>Maria Clara</span></h1>
+                <h1>Eu sou <span id="typed-text">Maria Clara</span></h1> <!-- Span para o efeito de digitação -->
                 <p>Pesquisadora em Astrofísica e Astronomia</p>
                 <div class="redes-social">
                     <a href="https://br.linkedin.com/in/maria-clara-s-bezerra1103" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -42,7 +42,14 @@
     </div><!--background-->
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script> <!-- Corrigido para o arquivo de script -->
-    
+    <script>
+        var typed = new Typed("#typed-text", { // Selecionando o elemento span pelo ID
+            strings: ["Maria Clara.", "Pesquisadora em Astrofísica.", "Desenvolvedora Web.", "Entusiasta de Astronomia."],
+            typeSpeed: 70,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+
 </body>
 </html>
