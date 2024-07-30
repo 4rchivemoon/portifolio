@@ -1,73 +1,85 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0e0e0; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
+.portfolio { 
 
-.profile-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
-    width: 90%;
-    max-width: 600px; 
-}
+  width:100%; 
+  height:100%; 
+  background:#CCC;   
+  float:left;
+  margin-bottom:20px;  
+  position:relative; 
+  overflow:hidden;
+  border-radius:6px; 
+ }
 
-.profile-image {
-    width: 100px; 
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #333;
-    margin: 0 auto; 
-}
+ .portfolio img { width:100%; height:100%; border-radius:6px; }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
+ .portfolio .portfolio_hover { 
 
-h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #333;
-}
+  z-index:2; 
+  width:100%; 
+  height:100%; 
+  position:absolute; 
+  top:-100%; 
+  left:0; 
+  background: rgba(0, 0, 0, 0.90);
+  border-radius:6px;  
+  transition:all 500ms; 
+  -moz-transition:all 500ms; 
+  -ms-transition:all 500ms; 
+  -o-transition:all 500ms; 
+  -webkit-transition:all 500ms;
+ }
 
-.links-container {
-    margin-top: 20px;
-}
+ .portfolio:hover .portfolio_hover { top:0;}
+ .portfolio:hover .title { left:0;}
+ .portfolio:hover .link  { left:0;}
+ .portfolio img          { top:0; left:0; z-index:1;}
 
-.button {
-    display: inline-block; 
-    padding: 12px 25px;
-    margin: 10px;
-    border: 2px solid #333; 
-    border-radius: 25px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    background-color: #f9f9f9; 
-    transition: background-color 0.3s, color 0.3s;
-}
+ .title { 
 
-.button:hover {
-    background-color: #333;
-    color: #fff;
-}
+  font-family: Helvetica, sans-serif; 
+  position:absolute; 
+  top:35%; 
+  left:100%; 
+  z-index:3; 
+  color:#fff; 
+  text-align:center; 
+  width:100%; 
+  font-size:25px;
 
-footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #666;
-}
+ }
+
+ .link { 
+
+  font-family: Helvetica, sans-serif; 
+  position:absolute; 
+  top:55%; 
+  left:-100%; 
+  z-index:3; 
+  color:#0adbdf; 
+  text-align:center; 
+  width:100%; 
+  font-size:16px;
+  text-decoration:none; 
+
+ }
+
+ .title,.link, .portfolio_hover{
+
+  transition:all 500ms; 
+  -moz-transition:all 500ms; 
+  -ms-transition:all 500ms; 
+  -o-transition:all 500ms; 
+  -webkit-transition:all 500ms;
+
+ }
+
+ @media (min-width:48em){
+
+     .portfolio {  width:32%; margin-right:2%; }
+     .portfolio:nth-of-type(3n+0) {  margin-right:0; }
+
+
+ }
 
 
 
