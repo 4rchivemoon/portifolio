@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0; /* Cor de fundo mais suave */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,18 +14,18 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
     width: 90%;
-    max-width: 600px; 
+    max-width: 600px; /* Limite a largura máxima */
 }
 
 .profile-image {
-    width: 120px; 
+    width: 120px; /* Tamanho menor */
     height: 120px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #333;
-    margin: 0 auto 15px;
+    margin: 0 auto 15px; /* Ajusta o espaçamento */
 }
 
 .profile-image img {
@@ -40,27 +40,20 @@ h1 {
     color: #333;
 }
 
-p {
-    font-size: 16px;
-    color: #555; 
-    margin: 10px 0;
-}
-
 .links-container {
     margin-top: 20px;
 }
 
 .button {
-    display: block;
+    display: inline-block; /* Ajusta para o botão se alinhar ao conteúdo */
     padding: 12px 25px;
-    margin: 10px auto;
-    width: 180px; 
-    border: 2px solid #333;
+    margin: 10px;
+    border: 2px solid #333; /* Borda adicionada */
     border-radius: 25px;
     text-align: center;
     text-decoration: none;
     color: #333;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Cor de fundo dos botões */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -75,3 +68,4 @@ footer {
     font-size: 12px;
     color: #666;
 }
+
