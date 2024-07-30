@@ -2,35 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Maria Clara - Portfólio</title>
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f2f2f2; /* Valor padrão */
+            --text-color: #333; /* Valor padrão */
+            --btn-bg-color: #fff; /* Valor padrão */
+            --btn-border-color: #333; /* Valor padrão */
+            --btn-text-color: #333; /* Valor padrão */
+            --btn-hover-bg-color: #333; /* Valor padrão */
+            --btn-hover-text-color: #fff; /* Valor padrão */
+        }
+        
+        body.light-mode {
+            --bg-color: #f2f2f2;
+            --text-color: #333;
+            --btn-bg-color: #fff;
+            --btn-border-color: #333;
+            --btn-text-color: #333;
+            --btn-hover-bg-color: #333;
+            --btn-hover-text-color: #fff;
+        }
+        
+        body.dark-mode {
+            --bg-color: #333;
+            --text-color: #fff;
+            --btn-bg-color: #555;
+            --btn-border-color: #fff;
+            --btn-text-color: #fff;
+            --btn-hover-bg-color: #fff;
+            --btn-hover-text-color: #333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button, .social-links a {
+            background-color: var(--btn-bg-color);
+            border: 2px solid var(--btn-border-color);
+            color: var(--btn-text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover, .social-links a:hover {
+            background-color: var(--btn-hover-bg-color);
+            color: var(--btn-hover-text-color);
+        }
+    </style>
 </head>
 <body>
-   <div class="theme-toggle">
-    <button id="theme-button">
-        <img src="https://img.icons8.com/material-outlined/24/000000/moon-satellite.png" alt="Modo Noturno" id="theme-icon">
-    </button>
-</div>
-    <div class="container">
-        <div class="profile">
-            <img src="https://i.imgur.com/AK60E56.jpg" alt="Foto de Perfil" class="profile-icon">
-            <p class="username">@mclarax_</p>
-        </div>
-        <div class="social-buttons">
-            <a href="https://br.linkedin.com/in/maria-clara-s-bezerra1103" target="_blank" class="btn">LinkedIn</a>
-            <a href="https://github.com/4rchivemoon" target="_blank" class="btn">GitHub</a>
-            <a href="https://gitlab.com/seu-usuario" target="_blank" class="btn">GitLab</a>
-            <a href="mailto:m.clarasb@hotmail.com" class="btn">Contato</a>
-        </div>
+    <!-- Conteúdo da página -->
+    <div class="theme-toggle">
+        <button id="theme-button">
+            <img src="https://img.icons8.com/material-outlined/24/000000/moon-satellite.png" alt="Modo Noturno" id="theme-icon">
+        </button>
     </div>
-    <footer>
-        <p>&copy; 2024 Maria Clara. Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeButton = document.getElementById('theme-button');
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+
+            document.body.classList.add(currentTheme + '-mode');
+            if (currentTheme === 'dark') {
+                themeIcon.src = "https://img.icons8.com/material-outlined/24/000000/sun.png"; // Ícone de Sol para modo claro
+            }
+
+            themeButton.addEventListener('click', () => {
+                const newTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+                document.body.classList.toggle('light-mode');
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', newTheme);
+
+                if (newTheme === 'dark') {
+                    themeIcon.src = "https://img.icons8.com/material-outlined/24/000000/sun.png";
+                } else {
+                    themeIcon.src = "https://img.icons8.com/material-outlined/24/000000/moon-satellite.png";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
