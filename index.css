@@ -33,12 +33,12 @@ header {
     top: 0;
 }
 
-.logo i {
-    font-size: 24px;
-    color: #2ecc71;
-    border: 1px solid #2ecc71;
-    border-radius: 50%;
-    padding: 10px;
+.logo img.profile-icon {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 2px solid #2ecc71; /* Cor da borda */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorção */
 }
 
 .cabeçalho-link {
